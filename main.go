@@ -1,7 +1,6 @@
 package main
 
 import (
-	"sniper/cmd/falsework"
 	"sniper/cmd/job"
 	"sniper/cmd/server"
 
@@ -12,7 +11,7 @@ func main() {
 	root := cobra.Command{Use: "sniper"}
 
 	root.AddCommand(
-		falsework.Cmd,
+		// falsework.Cmd,
 		server.Cmd,
 		job.Cmd,
 	)

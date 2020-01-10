@@ -134,8 +134,8 @@ func startServer() {
 	mux := http.NewServeMux()
 
 	timeout := 600 * time.Millisecond
-	initMux(mux, isInternal)
-
+	// initMux(mux, isInternal)
+	initMux(mux)
 	if isInternal {
 		initInternalMux(mux)
 
