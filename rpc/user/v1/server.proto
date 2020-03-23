@@ -1,0 +1,26 @@
+syntax = "proto3";
+package user.v1;
+
+// User 提供用户服务接口
+service User {
+  // Register 用户注册
+  rpc Register(RegistReq) returns (RegistResp);
+}
+
+// RegistReq 注册请求参数
+message RegistReq {
+  // account 账户名称
+  string account = 1;
+  // password 账户密码
+  string password = 2;
+  // mail 注册的邮箱号
+  string mail = 3;
+}
+
+// RegistResp 注册接口返回
+message RegistResp {
+  // code 业务错误码，0为成功，非0指向对应的错误信息
+  int32 code = 1;
+  // msg 错误信息
+  string msg = 2;
+}
